@@ -1,0 +1,191 @@
+:root {
+  --black: #3a3a3a;
+  --white: #fff;
+  --green: #49b293;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 50px 0;
+  color: var(--black);
+  font: 1rem/1.3 sans-serif;
+  background-color: lightblue;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: oblique;
+}
+
+h1 a {
+  transition: all 0.1s;
+}
+
+p {
+  padding: 25px;
+}
+
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filters * {
+  display: inline-block;
+}
+
+.filters label {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 2rem;
+  min-width: 50px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.filters label:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+.posts .post {
+  width: 400px;
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.posts .post-categories {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.posts .post-categories * {
+  display: inline-block;
+}
+
+.posts .post-categories a {
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid;
+  line-height: normal;
+  transition: all 0.1s;
+}
+
+.posts .post-categories a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+[value="All"]:checked ~ .filters [for="All"],
+[value="P"]:checked ~ .filters [for="alpha-P"],
+[value="C"]:checked ~ .filters [for="alpha-C"],
+[value="S"]:checked ~ .filters [for="alpha-S"],
+[value="O"]:checked ~ .filters [for="alpha-O"],
+[value="M"]:checked ~ .filters [for="alpha-M"],
+[value="T"]:checked ~ .filters [for="alpha-T"],
+[value="G"]:checked ~ .filters [for="alpha-G"],
+[value="V"]:checked ~ .filters [for="alpha-V"],
+[value="R"]:checked ~ .filters [for="alpha-R"],
+[value="K"]:checked ~ .filters [for="alpha-K"],
+[value="L"]:checked ~ .filters [for="alpha-L"],
+[value="J"]:checked ~ .filters [for="alpha-J"],
+[value="R"]:checked ~ .filters [for="alpha-R"],
+[value="H"]:checked ~ .filters [for="alpha-H"],
+[value="PHP"]:checked ~ .filters [for="PHP"],
+[value="C/C++"]:checked ~ .filters [for="C/C++"],
+[value="JavaScript"]:checked ~ .filters [for="JavaScript"],
+[value="C#"]:checked ~ .filters [for="C#"],
+[value="Swift"]:checked ~ .filters [for="Swift"],
+[value="Objective-C"]:checked ~ .filters [for="Objective-C"],
+[value="Matlab"]:checked ~ .filters [for="Matlab"],
+[value="TypeScript"]:checked ~ .filters [for="TypeScript"],
+[value="Go"]:checked ~ .filters [for="Go"],
+[value="Rust"]:checked ~ .filters [for="Rust"],
+[value="VBA"]:checked ~ .filters [for="VBA"],
+[value="Ruby"]:checked ~ .filters [for="Ruby"],
+[value="Kotlin"]:checked ~ .filters [for="Kotlin"],
+[value="Lua"]:checked ~ .filters [for="Lua"],
+[value="Perl"]:checked ~ .filters [for="Perl"],
+[value="Julia"]:checked ~ .filters [for="Julia"],
+[value="Scala"]:checked ~ .filters [for="Scala"],
+[value="Visual Basic"]:checked ~ .filters [for="Visual Basic"],
+[value="Haskell"]:checked ~ .filters [for="Haskell"] {
+  background: var(--green);
+  color: var(--white);
+}
+
+[value="All"]:checked ~ .posts [data-category] {
+  display: block;
+}
+
+[value="P"]:checked ~ .posts .post:not([data-category^="P"]),
+[value="C"]:checked ~ .posts .post:not([data-category^="C"]),
+[value="S"]:checked ~ .posts .post:not([data-category^="S"]),
+[value="O"]:checked ~ .posts .post:not([data-category^="O"]),
+[value="M"]:checked ~ .posts .post:not([data-category^="M"]),
+[value="T"]:checked ~ .posts .post:not([data-category^="T"]),
+[value="G"]:checked ~ .posts .post:not([data-category^="G"]),
+[value="V"]:checked ~ .posts .post:not([data-category^="V"]),
+[value="R"]:checked ~ .posts .post:not([data-category^="R"]),
+[value="K"]:checked ~ .posts .post:not([data-category^="K"]),
+[value="L"]:checked ~ .posts .post:not([data-category^="L"]),
+[value="J"]:checked ~ .posts .post:not([data-category^="J"]),
+[value="H"]:checked ~ .posts .post:not([data-category^="H"]),
+[value="PHP"]:checked ~ .posts .post:not([data-category~="PHP"]),
+[value="C/C++"]:checked ~ .posts .post:not([data-category~="C/C++"]),
+[value="JavaScript"]:checked ~ .posts .post:not([data-category~="JavaScript"]),
+[value="Java"]:checked ~ .posts .post:not([data-category~="Java"]),
+[value="C#"]:checked ~ .posts .post:not([data-category~="C#"]),
+[value="Swift"]:checked ~ .posts .post:not([data-category~="Swift"]),
+[value="Objective-C"]:checked
+  ~ .posts
+  .post:not([data-category~="Objective-C"]),
+[value="Matlab"]:checked ~ .posts .post:not([data-category~="Matlab"]),
+[value="TypeScript"]:checked ~ .posts .post:not([data-category~="TypeScript"]),
+[value="Go"]:checked ~ .posts .post:not([data-category~="Go"]),
+[value="Rust"]:checked ~ .posts .post:not([data-category~="Rust"]),
+[value="VBA"]:checked ~ .posts .post:not([data-category~="VBA"]),
+[value="Ruby"]:checked ~ .posts .post:not([data-category~="Ruby"]),
+[value="Kotlin"]:checked ~ .posts .post:not([data-category~="Kotlin"]),
+[value="Lua"]:checked ~ .posts .post:not([data-category~="Lua"]),
+[value="Perl"]:checked ~ .posts .post:not([data-category~="Perl"]),
+[value="Julia"]:checked ~ .posts .post:not([data-category~="Julia"]),
+[value="Scala"]:checked ~ .posts .post:not([data-category~="Scala"]),
+[value="Visual Basic"]:checked
+  ~ .posts
+  .post:not([data-category~="Visual Basic"])
+  [value="Haskell"]:checked
+  ~ .posts
+  .post:not([data-category~="Haskell"]) {
+  display: none;
+}
